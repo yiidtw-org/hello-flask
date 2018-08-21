@@ -1,0 +1,5 @@
+.git
+.gitignore
+*.pyc
+test_app.py
+README.md
