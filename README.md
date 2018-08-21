@@ -20,4 +20,3 @@ OK
 ## Framework
 - Flask 1.0.2
 
-## Pull Request
