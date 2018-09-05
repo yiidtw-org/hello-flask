@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello Web"
+    return "Hello World"
 
 @app.route("/echo")
 def echo():
