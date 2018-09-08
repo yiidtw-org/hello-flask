@@ -6,11 +6,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    app.logger.info("hello world logging")
     return "Hello World"
-
-@app.route("/echo")
-def echo():
-    return "echo"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
