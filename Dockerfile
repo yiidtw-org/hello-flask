@@ -1,13 +1,9 @@
 From python:2.7-alpine
 MAINTAINER yiidtw "yiidtw@gmail.com"
-
 WORKDIR /usr/src/app
-COPY requirements.txt ./
-
+COPY . .
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
-
-COPY . .
 
 EXPOSE 8080 
 
