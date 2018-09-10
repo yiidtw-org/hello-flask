@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
-from flask import Flask
-from datetime import datetime
+from flask import Flask, request
 import sys, logging
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open("/var/log/hello-flask/app.log", "a") as f:
-        f.write("INFO " + now + " Logging Test\n")
+    print 'INFO Incoming Hello from User-Agent: ' + request.headers['User-Agent']
     return "Hello World"
 
 if __name__ == '__main__':
