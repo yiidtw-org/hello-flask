@@ -1,5 +1,6 @@
-# hello-api-in-python-flask
-- This is a hello world example for developing first flask app, and test it
+# This is a demo for DevOps Day 2018
+
+## Unit Test
 ```
 $ python -m unittest test_app
 .
@@ -8,6 +9,7 @@ Ran 1 test in 0.000s
 
 OK
 ```
+
 ## Category
 - Python Web 
 
@@ -19,3 +21,6 @@ OK
 
 ## Framework
 - Flask 1.0.2
+
+## Author
+- visit [my blog](https://yiidtw.github.io/blog/) for more Devops and AI information
