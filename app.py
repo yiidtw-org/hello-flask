@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, request
+from flask import render_template
 import sys, logging
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
 
 app = Flask(__name__)
 
@@ -13,9 +16,14 @@ def hello():
 @app.route("/integration-test")
 def integration_test():
     global count
-    count = count + 1
+    if count < 2018:
+        count = count + 1
     print 'INFO Incoming Testing ' + str(count) + ' from User-Agent: ' + request.headers['User-Agent']
-    return "DevOpsDay " + str(count)
+    return "Receiving Request..."
+
+@app.route("/countdown")
+def countdown():
+    return render_template('it.html', year=str(count))
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=False, host='0.0.0.0', port=8080)
