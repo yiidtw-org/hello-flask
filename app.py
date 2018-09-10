@@ -11,7 +11,7 @@ def hello():
     return "Hello World"
 
 if __name__ == '__main__':
-    handler = logging.StreamHandler(sys.stdout)
+    handler = logging.FileHandler('/var/log/hello-flask/app.log', encoding='UTF-8')
     handler.setLevel(logging.DEBUG)
     logging_format = logging.Formatter(
        '%(levelname)s %(asctime)s %(filename)s %(funcName)s %(lineno)s %(message)s')
