@@ -11,7 +11,7 @@ count = 0
 
 @app.route("/")
 def hello():
-    return "Hello DevOpsDay"
+    return "Hello World"
 
 @app.route("/integration-test")
 def integration_test():
